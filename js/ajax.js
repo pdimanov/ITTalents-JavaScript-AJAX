@@ -30,7 +30,7 @@ var AJAX = {
 
 			url += this.parseParams(params);
 		}
-
+		
 		xhr.open(method, url, isAsync);
 
 		if(method == 'POST'){

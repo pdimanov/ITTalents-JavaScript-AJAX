@@ -2,7 +2,7 @@ var root = document.getElementById('root');
 
 window.addEventListener('load', function(){
 	document.getElementById('root').innerHTML = 'Loading...';
-	AJAX.makeRequest('GET', 'php/server.php', {"name": "Kevin"}, true, getAll);
+	AJAX.makeRequest('GET', 'php/server.php', {}, true, getAll);
 });
 
 function getAll(xhr){
@@ -17,8 +17,8 @@ function getAll(xhr){
 
 function appendToBody(character){
 	var div = document.createElement('div'),
-			characterPicture = document.createElement('img'),
-			characterName = document.createElement('a');
+		characterPicture = document.createElement('img'),
+		characterName = document.createElement('a');
 
 		characterName.innerHTML = character.name;
 		characterName.href = '#';
